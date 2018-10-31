@@ -91,8 +91,9 @@ $(function() {
 
                 loadFeed(1, function() {
                     entries2 = $('.feed').find("article");
+                    done();
                 });
-              done();
+
           });
         });
 
