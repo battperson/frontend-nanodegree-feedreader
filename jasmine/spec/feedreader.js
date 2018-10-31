@@ -61,11 +61,9 @@ $(function() {
         });
 
 
-        it('menu shows itself', function() {
+        it('menu toggles when clicked', function() {
             menuIcon.trigger('click');
             expect(body.hasClass('menu-hidden')).toBe(false);
-        });
-        it('menu hides itself', function() {
             menuIcon.trigger('click');
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
