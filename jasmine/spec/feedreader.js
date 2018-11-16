@@ -15,19 +15,14 @@ $(function() {
      */
     describe('RSS Feeds', function() {
         /* This is our first test - it tests to make sure that the
-         * allFeeds variable has been defined and that it is not
-         * empty. Experiment with this before you get started on
-         * the rest of this project. What happens when you change
-         * allFeeds in app.js to be an empty array and refresh the
-         * page?
-         * ReferenceError: allFeeds is not defined
+         * allFeeds variable has been defined
          */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
-
+        // and that it is not empty.
 
         it('url defined and not empty', function() {
             allFeeds.forEach(function(element) {
@@ -49,7 +44,7 @@ $(function() {
         });
     });
 
-
+// This section will test different parts of the menu as defined after the "it" statements
 
     describe('The menu', function() {
         var body =$('body'),
@@ -77,7 +72,7 @@ $(function() {
             });
         });
         it('loadFeed is called', function() {
-            var feedContainer = $('.feed').find("article");
+            var feedContainer = $('.feed').find("entry");
             expect(feedContainer.length).not.toBe(0);
         });
     });
